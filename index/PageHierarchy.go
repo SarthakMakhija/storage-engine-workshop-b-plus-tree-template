@@ -2,6 +2,7 @@ package index
 
 import (
 	"bytes"
+	"fmt"
 )
 
 type PageHierarchy struct {
@@ -126,18 +127,22 @@ func (pageHierarchy *PageHierarchy) get(key []byte, page *Page) GetResult {
 	index, found := page.Get(key)
 	if page.isLeaf() {
 		if found {
-			return NewKeyAvailableGetResult(page.GetKeyValuePairAt(index), index, page)
+			//Assignment:B+TreeGet:1:Get the KeyValue pair to be put inside NewKeyAvailableGetResult
+			return NewKeyAvailableGetResult(KeyValuePair{}, index, page)
 		}
 		return NewKeyMissingGetResult(index, page)
 	} else {
+		childPageIndex := index
 		if found {
-			index = index + 1
+			//Assignment:B+TreeGet:2:Adjust the value of childPageIndex
 		}
-		child, err := pageHierarchy.fetchOrCachePage(page.childPageIds[index])
+		childPage, err := pageHierarchy.fetchOrCachePage(page.childPageIds[childPageIndex])
 		if err != nil {
 			return NewFailedGetResult(err)
 		}
-		return pageHierarchy.get(key, child)
+		//Assignment:B+TreeGet:3:Make a recursive call on the child page & remove fmt.Println
+		fmt.Println(childPage)
+		return GetResult{}
 	}
 }
 

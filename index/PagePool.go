@@ -27,7 +27,9 @@ func (pagePool *PagePool) Allocate(pages int) (int, error) {
 }
 
 func (pagePool PagePool) Read(pageId int) (*Page, error) {
-	bytes, err := pagePool.indexFile.readFrom(pagePool.offsetOf(pageId), pagePool.pageSize)
+	//Assignment:B+TreeGet:4:Read the entire page from pagePool.indexFile
+	var bytes []byte
+	var err error = nil
 	if err != nil {
 		return nil, err
 	}
