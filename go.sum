@@ -1,3 +1,5 @@
+github.com/andyleap/gencode v0.0.0-20171124163308-e1423834d4b4 h1:8Po0yx+yydP7FvHfB9sw/26++RHWEZ/a69aRgO9AFWk=
+github.com/andyleap/gencode v0.0.0-20171124163308-e1423834d4b4/go.mod h1:yE6zprmDWRrIsbjHdb+C3MGq+YpJnqJxaFilOM27PtI=
 github.com/edsrzf/mmap-go v1.0.0 h1:CEBF7HpRnUCSJgGUb5h1Gm7e3VkmVDrR8lvWVLtrOFw=
 github.com/edsrzf/mmap-go v1.0.0/go.mod h1:YO35OhQPt3KJa3ryjFM5Bs14WD66h8eGKpfaBNrHW5M=
 golang.org/x/sys v0.0.0-20200302150141-5c8b2ff67527 h1:uYVVQ9WP/Ds2ROhcaGPeIdVq0RIXVLwsHlnvJ+cT1So=
